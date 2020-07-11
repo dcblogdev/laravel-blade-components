@@ -1,14 +1,18 @@
 @props([
-    'method' => 'POST',
+    'method' => 'post',
     'action' => ''
 ])
 
-<form method="{{ $method === 'GET' ? 'GET' : 'POST' }}" action="{{ $action }}" {{ $attributes}}>
-@if ($method != 'GET')
+@php
+$method = strtolower($method);
+@endphp
+
+<form method="{{ $method === 'get' ? 'get' : 'post' }}" action="{{ $action }}" {{ $attributes}}>
+@if ($method != 'get')
     @csrf
 @endif
 
-@if (! in_array($method, ['GET', 'POST']))
+@if (! in_array(strtoupper($method), ['get', 'post']))
     @method($method)
 @endif
 

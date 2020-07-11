@@ -15,5 +15,7 @@ class LaravelBladeComponentsServiceProvider extends ServiceProvider
         Blade::component('laravelbladecomponents::form.button', 'form.button');
         Blade::component('laravelbladecomponents::form.input', 'form.input');
         Blade::component('laravelbladecomponents::form.textarea', 'form.textarea');
+        Blade::component('laravelbladecomponents::form.checkbox', 'form.checkbox');
+        Blade::component('laravelbladecomponents::form.radio', 'form.radio');
     }
 }
