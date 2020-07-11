@@ -11,9 +11,9 @@ class LaravelBladeComponentsServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/components', 'laravelbladecomponents');
 
-        Blade::component('laravelbladecomponents::form', 'form');
-        Blade::component('laravelbladecomponents::form-button', 'form-button');
-        Blade::component('laravelbladecomponents::form-input', 'form-input');
-        Blade::component('laravelbladecomponents::form-textarea', 'form-textarea');
+        Blade::component('laravelbladecomponents::form.open', 'form.open');
+        Blade::component('laravelbladecomponents::form.button', 'form.button');
+        Blade::component('laravelbladecomponents::form.input', 'form.input');
+        Blade::component('laravelbladecomponents::form.textarea', 'form.textarea');
     }
 }
