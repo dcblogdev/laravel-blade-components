@@ -25,12 +25,16 @@ All form components accept option paramters that such as class='' style=''
 ### Open a form, defaults to post method and CSRF token
 ``` php
 <x-form.open>
+
+</x-form.open>
 ```
 
 The method and actions can be passed:
 
 ``` php
 <x-form.open method='delete' action='delete-comment'>
+
+</x-form.open>
 ```
 
 
