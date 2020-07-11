@@ -1,8 +1,6 @@
 # Laravel Blade components collection
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/dcblogdev/laravel-blade-components.svg?style=flat-square)](https://packagist.org/packages/dcblogdev/laravel-blade-components)
-[![Build Status](https://img.shields.io/travis/dcblogdev/laravel-blade-components/master.svg?style=flat-square)](https://travis-ci.org/dcblogdev/laravel-blade-components)
-[![Quality Score](https://img.shields.io/scrutinizer/g/dcblogdev/laravel-blade-components.svg?style=flat-square)](https://scrutinizer-ci.com/g/dcblogdev/laravel-blade-components)
 [![Total Downloads](https://img.shields.io/packagist/dt/dcblogdev/laravel-blade-components.svg?style=flat-square)](https://packagist.org/packages/dcblogdev/laravel-blade-components)
 
 Re-usable Laravel Blade components for your projects
