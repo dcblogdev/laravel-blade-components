@@ -147,6 +147,21 @@ or
 ```
 
 
+### Form button
+
+Create a button, defaults to a submit type
+
+```php
+<x-form.button name='submit'>Submit</x-form.button>
+```
+
+Create a button, using only the defaults and a label
+
+```php
+<x-form.button>Submit</x-form.button>
+```
+
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
