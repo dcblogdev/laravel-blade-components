@@ -37,6 +37,41 @@ The method and actions can be passed:
 </x-form.open>
 ```
 
+### Form input
+
+Create an input with a name, the name will be used as the label as long as the label is not provided.
+
+```php
+<x-form.input name='username'></x-form.input>
+```
+
+Outputs:
+
+```HTML
+<div>
+    <label for='username'>Username</label>
+    <input type='text' name='username' id='username' value=''>
+</div> 
+```
+
+Use a label
+
+```php
+<x-form.input name='username' label='Username'></x-form.input>
+```
+
+Use an id and a class
+
+```php
+<x-form.input name='username' label='Username' id='username' class='form-input'></x-form.input>
+```
+
+The type is set to test by default, it can be changed
+
+```php
+<x-form.input name='password' type='password'></x-form.input>
+```
+
 
 
 ### Changelog
