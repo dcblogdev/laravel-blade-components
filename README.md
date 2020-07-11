@@ -96,6 +96,56 @@ Set the textarea data
 <x-form.textarea name='comments' cols='10' rows='10'>{{ $comments }}</x-form.textarea>
 ```
 
+### Form checkbox
+
+A checkbox can also be defined, set the name and value
+
+```php
+<x-form.checkbox name='terms' value='1'></x-form.checkbox>
+```
+
+Check the checkbox by passing its value, as long its a match the checkbox will be checked.
+
+```php
+<x-form.checkbox name='terms' value='1'>1</x-form.checkbox>
+```
+
+or 
+
+```php
+<x-form.checkbox name='terms' value='1'>{{ $terms }}</x-form.checkbox>
+```
+
+### Form radio
+
+A radio can also be defined, set the name, label and value
+
+```php
+<x-form.radio name='result' label='Won' value='Won'></x-form.radio>
+<x-form.radio name='result' label='Lost' value='Lost'></x-form.radio>
+<x-form.radio name='result' label='Draw' value='Draw'></x-form.radio>
+```
+
+Pass a value which will check the matching radio.
+
+```php
+<x-form.radio name='result' label='Won' value='Won'>{{ $result }}</x-form.radio>
+<x-form.radio name='result' label='Lost' value='Lost'>{{ $result }}</x-form.radio>
+<x-form.radio name='result' label='Draw' value='Draw'>{{ $result }}</x-form.radio>
+```
+
+Check the checkbox by passing its value, as long its a match the checkbox will be checked.
+
+```php
+<x-form.checkbox name='terms' value='1'>1</x-form.checkbox>
+```
+
+or 
+
+```php
+<x-form.checkbox name='terms' value='1'>{{ $terms }}</x-form.checkbox>
+```
+
 
 ### Changelog
 
