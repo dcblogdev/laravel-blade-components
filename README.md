@@ -19,10 +19,16 @@ composer require dcblogdev/laravel-blade-components
 
 ## Form components
 
+[Form Open](#open)
+[Form Input](#form input)
+
 All form components accept option paramters that such as class='' style=''
 
 > When the method is set to PUT, PATCH or DELETE the @method() will be applied automatically.
-### Open a form, defaults to post method and CSRF token
+### Open 
+
+Defaults to post method and CSRF token
+
 ``` php
 <x-form.open>
 
