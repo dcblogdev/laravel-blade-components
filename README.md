@@ -146,6 +146,39 @@ or
 <x-form.checkbox name='terms' value='1'>{{ $terms }}</x-form.checkbox>
 ```
 
+### Form select
+
+create a select menu set the name and placeholder for the initial option 
+
+```php
+<x-form.select name='types' placeholder='Select'>
+
+</x-form.select>
+```
+
+Leave off the placeholder to have only the select and options that can be selected
+
+```php
+<x-form.select name='types'>
+
+</x-form.select>
+```
+
+In order to set the option an array is needed and is looped over and then a nested component is used.
+
+Pass in the key and value from the array
+
+```php
+@php
+$options = [1 => 'one', 2 => 'two', 3 => 'three'];
+@endphp
+
+<x-form.select name='types' placeholder='Select'>
+    @foreach($options as $key => $value)
+        <x-form.selectoption key='{{ $key }}' value='{{ $value }}'></x-form.selectoption>
+    @endforeach
+</x-form.select>
+```
 
 ### Form button
 
