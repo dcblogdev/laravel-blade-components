@@ -19,8 +19,13 @@ composer require dcblogdev/laravel-blade-components
 
 ## Form components
 
-[Form Open](#open)
-[Form Input](#form input)
+* [Open](#open)
+* [Input](#form-input)
+* [Textarea](#form-textarea)
+* [Checkbox](#form-checkbox)
+* [Radio](#form-radio)
+* [Select](#form-select)
+* [Button](#form-button)
 
 All form components accept option paramters that such as class='' style=''
 
