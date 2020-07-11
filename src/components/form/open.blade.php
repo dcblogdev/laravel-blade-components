@@ -17,3 +17,5 @@ $method = strtolower($method);
 @endif
 
 {{ $slot }}
+
+</form>
