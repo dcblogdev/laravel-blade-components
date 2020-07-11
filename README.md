@@ -72,6 +72,29 @@ The type is set to test by default, it can be changed
 <x-form.input name='password' type='password'></x-form.input>
 ```
 
+Set the input value
+
+```php
+<x-form.input name='username' label='Username'>{{ $username }}</x-form.input>
+```
+
+### Form textarea
+
+```php
+<x-form.textarea name='comments'></x-form.textarea>
+```
+
+Set the rows and columns
+
+```php
+<x-form.textarea name='comments' cols='10' rows='10'></x-form.textarea>
+```
+
+Set the textarea data
+
+```php
+<x-form.textarea name='comments' cols='10' rows='10'>{{ $comments }}</x-form.textarea>
+```
 
 
 ### Changelog
