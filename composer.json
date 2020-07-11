@@ -1,0 +1,34 @@
+{
+    "name": "dcblogdev/laravel-blade-components",
+    "description": "Laravel Blade components collection",
+    "keywords": [
+        "dcblogdev",
+        "blade-components-forms"
+    ],
+    "homepage": "https://github.com/dcblogdev/laravel-blade-components",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "David Carr",
+            "email": "dave@dcblog.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dcblogdev\\LaravelBladeComponents\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dcblogdev\\LaravelBladeComponents\\LaravelBladeComponentsServiceProvider"
+            ]
+        }
+    }
+}
