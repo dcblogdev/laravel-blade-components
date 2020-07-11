@@ -15,11 +15,25 @@ You can install the package via composer:
 composer require dcblogdev/laravel-blade-components
 ```
 
-## Usage
+## Usage 
+
+## Form components
+
+All form components accept option paramters that such as class='' style=''
+
+> When the method is set to PUT, PATCH or DELETE the @method() will be applied automatically.
+### Open a form, defaults to post method and CSRF token
+``` php
+<x-form.open>
+```
+
+The method and actions can be passed:
 
 ``` php
-// Usage description here
+<x-form.open method='delete' action='delete-comment'>
 ```
+
+
 
 ### Changelog
 
