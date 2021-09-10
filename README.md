@@ -25,7 +25,7 @@ composer require dcblogdev/laravel-blade-components
 * [Select](#form-select)
 * [Button](#form-button)
 
-All form components accept option paramters that such as class='' style=''
+All form components accept option parameters that such as class='' style=''
 
 > When the method is set to PUT, PATCH or DELETE the @method() will be applied automatically.
 ### Open 
