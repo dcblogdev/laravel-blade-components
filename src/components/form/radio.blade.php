@@ -1,14 +1,21 @@
 @props([
-    'name' => '',
+    'name'  => '',
+    'id'    => '',
     'label' => '',
-    'value' => '',
+    'value' => ''
 ])
+
+@if ($id === '')
+    @php
+        $id = $name;
+    @endphp
+@endif
 
 @if ($label === '')
     @php
         //remove underscores from name
         $label = str_replace('_', ' ', $name);
-        //detect subsequent letters starting with a capital 
+        //detect subsequent letters starting with a capital
         $label = preg_split('/(?=[A-Z])/', $label);
         //display capital words with a space
         $label = implode(' ', $label);
@@ -18,6 +25,6 @@
 @endif
 
 <div>
-    <label for='{{ $name }}'>{{ $label }}</label>
-    <input type='radio' name='{{ $name }}' id='{{ $name }}' value='{{ $value }}' @if ($slot == $value) checked="checked" @endif {{ $attributes }}>
+    <input type='radio' name='{{ $name }}' id='{{ $id }}' value='{{ $value }}' @if ($slot != '') checked="checked" @endif {{ $attributes }}>
+    <label for='{{ $id }}'>{{ $label }}</label>
 </div>

@@ -1,14 +1,14 @@
+@push('scripts')
+  <script src="/js/ckeditor/ckeditor.js"></script>
+@endpush
+
 @props([
-    'required' => '',
-    'type' => 'text',
     'name' => '',
     'label' => '',
-    'value' => '',
+    'required' => false
 ])
 
-@if ($label === 'none')
-
-@elseif ($label === '')
+@if ($label == '')
     @php
         //remove underscores from name
         $label = str_replace('_', ' ', $name);
@@ -20,22 +20,24 @@
         $label = ucwords(strtolower($label));
     @endphp
 @endif
-
-<div class="mb-5">
+<div wire:ignore class="mt-5">
     @if ($label !='none')
         <label for="{{ $name }}" class="block text-sm font-medium leading-5 text-gray-700 dark:text-gray-200">{{ $label }} @if ($required != '') <span class="text-red-600">*</span>@endif</label>
     @endif
-    <div class="rounded-md shadow-sm">
-        <input
-            type="{{ $type }}"
-            id="{{ $name }}"
-            name="{{ $name }}"
-            value="{{ $slot }}"
-            {{ $required }}
-            {{ $attributes->merge(['class' => 'block w-full dark:bg-gray-500 dark:text-gray-200 dark:placeholder-gray-200 border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-light-blue-500 focus:border-light-blue-500 sm:text-sm']) }}>
-        @error($name)
-            <p class="error">{{ $message }}</p>
-        @enderror
-    </div>
+    <textarea
+        x-data
+        x-init="
+            editor = CKEDITOR.replace($refs.item);
+            editor.on('change', function(event){
+                @this.set('{{ $name }}', event.editor.getData());
+            })
+        "
+        x-ref="item"
+        {{ $attributes }}
+    >
+        {{ $slot }}
+    </textarea>
 </div>
-
+@error($name)
+    <p class="error">{{ $message }}</p>
+@enderror

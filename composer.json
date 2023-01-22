@@ -16,12 +16,14 @@
         }
     ],
     "require": {
-        "php": "^7.2",
-        "illuminate/support": "^7.0|^8.0"
+        "orchestra/testbench": "^5.0|^6.23|^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1"
     },
     "autoload": {
         "psr-4": {
-            "Dcblogdev\\LaravelBladeComponents\\": "src"
+            "Dcblogdev\\LaravelBladeComponents\\": "src",
+            "Dcblogdev\\LaravelBladeComponents\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -29,6 +31,11 @@
             "providers": [
                 "Dcblogdev\\LaravelBladeComponents\\LaravelBladeComponentsServiceProvider"
             ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
