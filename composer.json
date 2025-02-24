@@ -16,9 +16,9 @@
         }
     ],
     "require": {
-        "orchestra/testbench": "^5.0|^6.23|^7.0|^8.0|^9.0.4",
-        "pestphp/pest": "^1.23|^2.34.7",
-        "pestphp/pest-plugin-laravel": "^2.4"
+        "orchestra/testbench": "^5.0|^6.23|^7.0|^8.0|^9.0.4|^10.0",
+        "pestphp/pest": "^1.23|^2.34.7|^3.0",
+        "pestphp/pest-plugin-laravel": "^2.4|^3.1"
     },
     "autoload": {
         "psr-4": {
